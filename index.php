@@ -74,7 +74,7 @@ foreach ($reponse3 as $value) {
 
     $value->message = str_replace(':smile_cat:','<img style="width: 30px; height: 30px" src="smile_cat.png"/>', $value->message);
 
-    echo '<p><strong>'.htmlspecialchars($value->username).'</strong>: '.$value->message.'</p>';
+    echo '<p style="color:deeppink">'.htmlspecialchars($value->username).'</p>: <p>'.$value->message.'</p>';
 }
 ?>
 
