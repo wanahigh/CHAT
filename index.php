@@ -12,11 +12,24 @@ $pseudocookie = $_COOKIE['pseudo'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Material Design Light -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-pink.min.css">
 </head>
 
 <body>
+
+
+<style>
+  html{
+      background-image: url("Wallpaper-Pattern-In-High-Quality.jpg");
+  }
+    main{
+        background-color: white;
+        margin-left:25%;
+        margin-right:25%;
+    }
+</style>
     <div class="mdl-layout mdl-js-layout">
         <main class="mdl-layout__content">
             <div class="page-content">
@@ -61,7 +74,7 @@ foreach ($reponse3 as $value) {
 
     $value->message = str_replace(':smile_cat:','<img style="width: 30px; height: 30px" src="smile_cat.png"/>', $value->message);
 
-    echo '<p><strong>'.htmlspecialchars($value->pseudo).'</strong>: '.$value->message.'</p>';
+    echo '<p><strong>'.htmlspecialchars($value->username).'</strong>: '.$value->message.'</p>';
 }
 ?>
 
@@ -76,6 +89,10 @@ foreach ($reponse3 as $value) {
 // ...
 ?>
                 </ul>
+
+<main>
+
+
 
                 <form action="post.php" class="mdl-grid" method="POST">
                     <div class="mdl-cell mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -93,8 +110,9 @@ foreach ($reponse3 as $value) {
             </div>
         </main>
     </div>
-
+</main>
     <!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
     <script language="javascript">
         setTimeout(function(){
